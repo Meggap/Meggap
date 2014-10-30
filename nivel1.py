@@ -26,13 +26,13 @@ class Level_01(Level):
         #sonido.play()
         
         self.background.set_colorkey(constantes.BLANCO)
-        self.level_limit = -16000
+        self.level_limit = -15100
 
         #COMIDAAAS
         
 
         self.lista_de_comidas.add(Amarillo(575,410))
-        self.lista_de_comidas.add(Azul(600,300))
+        self.lista_de_comidas.add(Azul(700,280))
         self.lista_de_comidas.add(Celeste(200,400))
         self.lista_de_comidas.add(Naranja(250,400))
         self.lista_de_comidas.add(Rojo(280,400))
