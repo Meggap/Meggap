@@ -9,7 +9,7 @@ from jugador import Player
 def main():
     """ Programa principal """
     pygame.init()
-
+    
     # Set the height and width of the screen
     size = [constantes.ANCHO_PANTALLA, constantes.LARGO_PANTALLA]
     screen = pygame.display.set_mode(size)

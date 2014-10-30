@@ -71,7 +71,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 
         self.colision = pygame.mixer.Sound("sonido/sonidocolicion.ogg")
-
+        self.comidas_que_chocan  = pygame.mixer.Sound("sonido/SI.ogg")
     def update(self):
         """ Metodo que mueve al jugador. """
         # Gravedad
@@ -106,6 +106,7 @@ class Player(pygame.sprite.Sprite):
                 self.rect.bottom = block.rect.top
             elif self.mover_y < 0:
                 self.rect.top = block.rect.bottom
+                
             self.colision.play()
 
             self.mover_y = 0
@@ -117,7 +118,7 @@ class Player(pygame.sprite.Sprite):
         for comidas_que_chocan in lista_de_comidas_a_comer:
             comidas_que_chocan.kill()
             self.puntaje = self.puntaje + 1
-
+            self.comidas_que_chocan.play()
     def calc_grav(self):
         """ Calcula el efecto de la grabedad. """
         if self.mover_y == 0:

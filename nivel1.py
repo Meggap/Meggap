@@ -45,6 +45,8 @@ class Level_01(Level):
         self.lista_de_comidas.add(Naranja(2800,520))
         self.lista_de_comidas.add(Violeta(2620,420))
         self.lista_de_comidas.add(Amarillo(2800,420))
+        self.lista_de_comidas.add(Rojo(3100,420))
+        self.lista_de_comidas.add(Azul(3120,250))
 
         # ubicacion de las plataformas.
         level = [ [platforms.LADRILLO1, 560, 460],
@@ -55,8 +57,10 @@ class Level_01(Level):
                   [platforms.LADRILLO3, 1750, 400],
                   [platforms.LADRILLO3, 2500, 478],
                   [platforms.LADRILLO3, 2630, 478],
-                  [platforms.LADRILLO3, 2760, 478]
-
+                  [platforms.LADRILLO3, 2760, 478],
+                  [platforms.LADRILLO1, 3000, 400],
+                  [platforms.LADRILLO1, 3200, 350],
+                  [platforms.LADRILLO1, 3800, 350]
 
 
 
@@ -74,7 +78,7 @@ class Level_01(Level):
         level = [ [platforms.LADRILLO3, 1550, 500],
                  [platforms.LADRILLO3, 1550, 395],
                  [platforms.LADRILLO3, 1880, 400]
-                 
+
                   
 
 
@@ -94,6 +98,16 @@ class Level_01(Level):
         block.rect.y = 375
         block.boundary_left = 690
         block.boundary_right = 800
+        block.mover_x = 1
+        block.player = self.player
+        block.nivel = self
+        self.platform_list.add(block)
+
+        block = platforms.MovingPlatform(platforms.LADRILLO2)
+        block.rect.x = 3300
+        block.rect.y = 200
+        block.boundary_left = 3300
+        block.boundary_right = 3580
         block.mover_x = 1
         block.player = self.player
         block.nivel = self
