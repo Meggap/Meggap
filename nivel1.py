@@ -28,16 +28,23 @@ class Level_01(Level):
         self.background.set_colorkey(constantes.BLANCO)
         self.level_limit = -15100
 
-        #COMIDAAAS
+        #COMIDAS
         
 
-        self.lista_de_comidas.add(Amarillo(575,410))
-        self.lista_de_comidas.add(Azul(700,280))
-        self.lista_de_comidas.add(Celeste(200,400))
-        self.lista_de_comidas.add(Naranja(250,400))
-        self.lista_de_comidas.add(Rojo(280,400))
-        self.lista_de_comidas.add(Verde(250,400))
-        self.lista_de_comidas.add(Violeta(200,150))
+        self.lista_de_comidas.add(Amarillo(1480,535))
+        self.lista_de_comidas.add(Azul(800,280))
+        self.lista_de_comidas.add(Celeste(1820,250))
+        self.lista_de_comidas.add(Naranja(1580,430))
+        self.lista_de_comidas.add(Rojo(1110,140))
+        self.lista_de_comidas.add(Verde(1820,430))
+        self.lista_de_comidas.add(Violeta(1420,535))
+        self.lista_de_comidas.add(Rojo(2050,520))
+        self.lista_de_comidas.add(Azul(2100,520))
+        self.lista_de_comidas.add(Verde(2150,520))
+        self.lista_de_comidas.add(Celeste(2620,520))
+        self.lista_de_comidas.add(Naranja(2800,520))
+        self.lista_de_comidas.add(Violeta(2620,420))
+        self.lista_de_comidas.add(Amarillo(2800,420))
 
         # ubicacion de las plataformas.
         level = [ [platforms.LADRILLO1, 560, 460],
@@ -45,7 +52,12 @@ class Level_01(Level):
                   [platforms.LADRILLO3, 1200, 280],
                   [platforms.LADRILLO2, 1390, 330],
                   [platforms.LADRILLO3, 1620, 400],
-                  [platforms.LADRILLO3, 1750, 400]
+                  [platforms.LADRILLO3, 1750, 400],
+                  [platforms.LADRILLO3, 2500, 478],
+                  [platforms.LADRILLO3, 2630, 478],
+                  [platforms.LADRILLO3, 2760, 478]
+
+
 
 
                   ]
