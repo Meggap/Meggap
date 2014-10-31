@@ -71,7 +71,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 
         self.colision = pygame.mixer.Sound("sonido/sonidocolicion.ogg")
-        self.comidas_que_chocan  = pygame.mixer.Sound("sonido/SI.ogg")
+        self.comidas_que_chocan  = pygame.mixer.Sound("sonido/SOL.ogg")
     def update(self):
         """ Metodo que mueve al jugador. """
         # Gravedad

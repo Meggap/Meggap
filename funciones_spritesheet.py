@@ -27,7 +27,7 @@ class SpriteSheet(object):
         image.blit(self.sprite_sheet, (0, 0), (x, y, width, height))
 
         # Asumimos que tiene un fondo negro y lo queremos hacer transparente. 
-        image.set_colorkey(constantes.BLANCO)
+        image.set_colorkey(constantes.NEGRO)
 
         return image
 

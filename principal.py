@@ -92,11 +92,11 @@ def main():
         # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT
         current_level.draw(screen)
         active_sprite_list.draw(screen)
-        text = letraParaMarcador.render("Puntos: "+str(player.puntaje), 1 , constantes.ROJO)
+        text = letraParaMarcador.render("Notas: "+str(player.puntaje), 1 , constantes.NEGRO)
         screen.blit(text, (650,0))
-        sol = pygame.image.load("imagenes/sol3.png").convert()
-        sol.set_colorkey(constantes.BLANCO)
-        screen.blit(sol, (0, 0))
+        #sol = pygame.image.load("imagenes/sol.png").convert_alpha()
+        #sol.set_colorkey(constantes.NEGRO)
+        #screen.blit(sol, (10, 20))
         # ALL CODE TO DRAW SHOULD GO ABOVE THIS COMMENT
 
         # Limit to 60 frames per second

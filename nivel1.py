@@ -54,6 +54,7 @@ class Level_01(Level):
         #Artefactos
         autorojo = pygame.image.load("imagenes/auto3.PNG").convert()
         autorojo.set_colorkey(constantes.BLANCO)
+        #autorojo = pygame.transform.rotate(autorojo,90)
         self.background.blit(autorojo, (2000, 500))
 
         # ubicacion de las plataformas.
