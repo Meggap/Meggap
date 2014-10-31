@@ -27,7 +27,7 @@ class Level_01(Level):
         
         self.background.set_colorkey(constantes.BLANCO)
         self.level_limit = -15100
-
+        
         #COMIDAS
         
 
@@ -47,6 +47,14 @@ class Level_01(Level):
         self.lista_de_comidas.add(Amarillo(2800,420))
         self.lista_de_comidas.add(Rojo(3100,420))
         self.lista_de_comidas.add(Azul(3120,250))
+        self.lista_de_comidas.add(Rojo(3550,70))
+        self.lista_de_comidas.add(Verde(3500,70))
+
+
+        #Artefactos
+        autorojo = pygame.image.load("imagenes/auto3.PNG").convert()
+        autorojo.set_colorkey(constantes.BLANCO)
+        self.background.blit(autorojo, (2000, 500))
 
         # ubicacion de las plataformas.
         level = [ [platforms.LADRILLO1, 560, 460],

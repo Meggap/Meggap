@@ -94,7 +94,9 @@ def main():
         active_sprite_list.draw(screen)
         text = letraParaMarcador.render("Puntos: "+str(player.puntaje), 1 , constantes.ROJO)
         screen.blit(text, (650,0))
-
+        sol = pygame.image.load("imagenes/sol3.png").convert()
+        sol.set_colorkey(constantes.BLANCO)
+        screen.blit(sol, (0, 0))
         # ALL CODE TO DRAW SHOULD GO ABOVE THIS COMMENT
 
         # Limit to 60 frames per second
