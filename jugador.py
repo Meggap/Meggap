@@ -107,7 +107,7 @@ class Player(pygame.sprite.Sprite):
             elif self.mover_y < 0:
                 self.rect.top = block.rect.bottom
                 
-            self.colision.play()
+
 
             self.mover_y = 0
 
@@ -120,15 +120,15 @@ class Player(pygame.sprite.Sprite):
             self.puntaje = self.puntaje + 1
             self.comidas_que_chocan.play()
     def calc_grav(self):
-        """ Calcula el efecto de la grabedad. """
+        """ Calcula el efecto de la gravedad. """
         if self.mover_y == 0:
-            self.mover_y = 1
+            self.mover_y = 2
         else:
-            self.mover_y += .35
+            self.mover_y += .34
 
         # Verificamos si estamos en el suelo.
-        if self.rect.y >= constantes.LARGO_PANTALLA - self.rect.height and self.mover_y >= 0:
-            self.mover_y = 0
+        if self.rect.y >= constantes.LARGO_PANTALLA - self.rect.height and self.mover_y >= 1:
+            self.mover_y = 1
             self.rect.y = constantes.LARGO_PANTALLA - self.rect.height
 
     def jump(self):

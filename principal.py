@@ -15,22 +15,23 @@ def main():
     screen = pygame.display.set_mode(size)
     letraParaMarcador = pygame.font.Font(None,36)
     pygame.display.set_caption("Meggap")
-
+    sonido=pygame.mixer.Sound("sonido/sonifofondoprovicional.ogg")
+    sonido.play()
     # Create the player
     player = Player()
-
+    
     # Create all the levels
     level_list = []
     level_list.append(Level_01(player))
-    #level_list.append(Level_02(player))
-
+    level_list.append(Level_02(player))
+    
     # Set the current level
     current_level_no = 0
     current_level = level_list[current_level_no]
-
+    
     active_sprite_list = pygame.sprite.Group()
     player.nivel = current_level
-
+    
     player.rect.x = 340
     player.rect.y = constantes.LARGO_PANTALLA - player.rect.height
     active_sprite_list.add(player)
@@ -84,6 +85,7 @@ def main():
         print current_position
         if current_position < current_level.level_limit:
             player.rect.x = 120
+            """INSERTAR SONIDO DE FINAL DE LVL AQUI"""
             if current_level_no < len(level_list)-1:
                 current_level_no += 1
                 current_level = level_list[current_level_no]

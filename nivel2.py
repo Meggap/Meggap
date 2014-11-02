@@ -24,19 +24,7 @@ class Level_02(Level):
         self.level_limit = -1000
 
         # Array with type of platform, and x, y location of the platform.
-        level = [ [platforms.STONE_PLATFORM_LEFT, 500, 550],
-                  [platforms.STONE_PLATFORM_MIDDLE, 570, 550],
-                  [platforms.STONE_PLATFORM_RIGHT, 640, 550],
-                  [platforms.GRASS_LEFT, 800, 400],
-                  [platforms.GRASS_MIDDLE, 870, 400],
-                  [platforms.GRASS_RIGHT, 940, 400],
-                  [platforms.GRASS_LEFT, 1000, 500],
-                  [platforms.GRASS_MIDDLE, 1070, 500],
-                  [platforms.GRASS_RIGHT, 1140, 500],
-                  [platforms.STONE_PLATFORM_LEFT, 1120, 280],
-                  [platforms.STONE_PLATFORM_MIDDLE, 1190, 280],
-                  [platforms.STONE_PLATFORM_RIGHT, 1260, 280],
-                  ]
+        level = [  ]
 
 
         # Go through the array above and add platforms
@@ -48,12 +36,12 @@ class Level_02(Level):
             self.platform_list.add(block)
 
         # Add a custom moving platform
-        block = platforms.MovingPlatform(platforms.STONE_PLATFORM_MIDDLE)
-        block.rect.x = 1500
-        block.rect.y = 300
-        block.boundary_top = 100
-        block.boundary_bottom = 550
-        block.mover_y = -1
-        block.player = self.player
-        block.nivel = self
-        self.platform_list.add(block)
+        #block = platforms.MovingPlatform(platforms.STONE_PLATFORM_MIDDLE)
+        #block.rect.x = 1500
+        #block.rect.y = 300
+        #block.boundary_top = 100
+        #block.boundary_bottom = 550
+        #block.mover_y = -1
+        #block.player = self.player
+        #block.nivel = self
+        #self.platform_list.add(block)

@@ -55,23 +55,22 @@ class Level_01(Level):
         autorojo = pygame.image.load("imagenes/auto3.PNG").convert()
         autorojo.set_colorkey(constantes.BLANCO)
         #autorojo = pygame.transform.rotate(autorojo,90)
-        self.background.blit(autorojo, (2000, 500))
+        self.background.blit(autorojo, (1950, 500))
 
         # ubicacion de las plataformas.
-        level = [ [platforms.LADRILLO1, 560, 460],
-                  [platforms.LADRILLO2, 980, 280],
-                  [platforms.LADRILLO3, 1200, 280],
-                  [platforms.LADRILLO2, 1390, 330],
-                  [platforms.LADRILLO3, 1620, 400],
-                  [platforms.LADRILLO3, 1750, 400],
-                  [platforms.LADRILLO3, 2500, 478],
-                  [platforms.LADRILLO3, 2630, 478],
-                  [platforms.LADRILLO3, 2760, 478],
-                  [platforms.LADRILLO1, 3000, 400],
-                  [platforms.LADRILLO1, 3200, 350],
-                  [platforms.LADRILLO1, 3800, 350]
-
-
+        level = [ [platforms.LADRILLO1, 560, 427],
+                  [platforms.LADRILLO2, 980, 247],
+                  [platforms.LADRILLO3, 1200, 247],
+                  [platforms.LADRILLO2, 1390, 297],
+                  [platforms.LADRILLO3, 1620, 367],
+                  [platforms.LADRILLO3, 1750, 367],
+                  [platforms.LADRILLO3, 2500, 445],
+                  [platforms.LADRILLO3, 2630, 445],
+                  [platforms.LADRILLO3, 2760, 445],
+                  [platforms.LADRILLO1, 3000, 367],
+                  [platforms.LADRILLO1, 3200, 317],
+                  [platforms.LADRILLO1, 3800, 317],
+                  [platforms.PISO, 0, 580]
 
                   ]
 
@@ -84,9 +83,10 @@ class Level_01(Level):
             block.player = self.player
             self.platform_list.add(block)
 
-        level = [ [platforms.LADRILLO3, 1550, 500],
-                 [platforms.LADRILLO3, 1550, 395],
-                 [platforms.LADRILLO3, 1880, 400]
+        level = [ [platforms.LADRILLO3, 1550, 444],
+                 [platforms.LADRILLO3, 1550, 367],
+                 [platforms.LADRILLO3, 1880, 367],
+                 [platforms.PISO, 100, 0]
 
                   
 

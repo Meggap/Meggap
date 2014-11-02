@@ -15,7 +15,7 @@ from funciones_spritesheet import SpriteSheetPlataformas
 LADRILLO1            = (0, 0, 65, 39)
 LADRILLO2           = (65, 0, 90, 33)
 LADRILLO3          = (0, 39, 130, 21)
-
+PISO               = (0,104,6000,33)
 class Platform(pygame.sprite.Sprite):
     """ Platform the user can jump on """
 
@@ -25,12 +25,13 @@ class Platform(pygame.sprite.Sprite):
             code. """
         pygame.sprite.Sprite.__init__(self)
 
-        sprite_sheet = SpriteSheetPlataformas("imagenes/plataformas.png")
+        sprite_sheet = SpriteSheetPlataformas("imagenes/plataformaspiso.png")
         # Grab the image for this platform
         self.image = sprite_sheet.get_image(sprite_sheet_data[0],
                                             sprite_sheet_data[1],
                                             sprite_sheet_data[2],
-                                            sprite_sheet_data[3])
+                                            sprite_sheet_data[3]
+                                            )
 
         self.rect = self.image.get_rect()
 
@@ -43,14 +44,16 @@ class VerticalPlatform(pygame.sprite.Sprite):
             code. """
         pygame.sprite.Sprite.__init__(self)
 
-        sprite_sheet = SpriteSheetPlataformas("imagenes/plataformas.png")
+        sprite_sheet = SpriteSheetPlataformas("imagenes/plataformaspiso.png")
         # Grab the image for this platform
         self.image = sprite_sheet.get_image(sprite_sheet_data[0],
                                             sprite_sheet_data[1],
                                             sprite_sheet_data[2],
-                                            sprite_sheet_data[3])
+                                            sprite_sheet_data[3]
+                                            )
         self.image = pygame.transform.rotate(self.image,90)
         self.rect = self.image.get_rect()
+
 
 class MovingPlatform(Platform):
     """ This is a fancier platform that can actually move. """
