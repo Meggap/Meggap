@@ -12,9 +12,9 @@ from funciones_spritesheet import SpriteSheetPlataformas
 #   Width of sprite
 #   Height of sprite
 
-LADRILLO1            = (0, 0, 65, 39)
+LADRILLO1            = (0, 0, 65, 40)
 LADRILLO2           = (65, 0, 90, 33)
-LADRILLO3          = (0, 39, 130, 21)
+LADRILLO3          = (0, 39, 130, 25)
 PISO               = (0,104,6000,33)
 class Platform(pygame.sprite.Sprite):
     """ Platform the user can jump on """
