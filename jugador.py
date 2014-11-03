@@ -19,8 +19,10 @@ class Player(pygame.sprite.Sprite):
     jugador_frame_der = []
     
     puntaje = 0
+    
     # Direccion en la que va el jugador.
     direccion = "R"
+    salto = False
 
     # Lista de sprite con las cosas que nos podemos chocar.
     nivel = None
@@ -101,13 +103,10 @@ class Player(pygame.sprite.Sprite):
 
         lista_de_bloques_colisionados = pygame.sprite.spritecollide(self, self.nivel.platform_list, False)
         for block in lista_de_bloques_colisionados:
-
             if self.mover_y > 0:
                 self.rect.bottom = block.rect.top
             elif self.mover_y < 0:
                 self.rect.top = block.rect.bottom
-                
-
 
             self.mover_y = 0
 
@@ -119,9 +118,15 @@ class Player(pygame.sprite.Sprite):
             comidas_que_chocan.kill()
             self.puntaje = self.puntaje + 1
             self.comidas_que_chocan.play()
+        
+        
+        
     def calc_grav(self):
         """ Calcula el efecto de la gravedad. """
         if self.mover_y == 0:
+            if self.salto:
+                self.colision.play()
+                self.salto = False
             self.mover_y = 2
         else:
             self.mover_y += .34
@@ -130,10 +135,12 @@ class Player(pygame.sprite.Sprite):
         if self.rect.y >= constantes.LARGO_PANTALLA - self.rect.height and self.mover_y >= 1:
             self.mover_y = 1
             self.rect.y = constantes.LARGO_PANTALLA - self.rect.height
+            
 
     def jump(self):
         """ Metodo que se llamam si saltamos. """
-
+        
+        self.salto = True
         self.rect.y += 2
         platform_hit_list = pygame.sprite.spritecollide(self, self.nivel.platform_list, False)
         self.rect.y -= 2

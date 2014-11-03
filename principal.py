@@ -55,6 +55,7 @@ def main():
                     player.go_right()
                 if event.key == pygame.K_UP:
                     player.jump()
+                    
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT and player.mover_x < 0:
@@ -82,7 +83,7 @@ def main():
 
         # If the jugador gets to the end of the level, go to the next level
         current_position = player.rect.x + current_level.world_shift
-        print current_position
+      #  print current_position
         if current_position < current_level.level_limit:
             player.rect.x = 120
             """INSERTAR SONIDO DE FINAL DE LVL AQUI"""

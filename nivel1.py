@@ -66,10 +66,12 @@ class Level_01(Level):
         self.lista_de_comidas.add(Azul(6300,430))
         self.lista_de_comidas.add(Amarillo(6500,430))
         self.lista_de_comidas.add(Naranja(6500,430))
+        self.lista_de_comidas.add(Verde(6700,380))
+        self.lista_de_comidas.add(Rojo(6800,380))
 
 
         #Artefactos
-        autorojo = pygame.image.load("imagenes/auto3.PNG").convert()
+        autorojo = pygame.image.load("imagenes/auto3.png").convert()
         autorojo.set_colorkey(constantes.BLANCO)
         #autorojo = pygame.transform.rotate(autorojo,90)
         self.background.blit(autorojo, (1980, 500))
